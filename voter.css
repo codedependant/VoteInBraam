@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+body
+{
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: url(https://raw.github.com/subtlepatterns/SubtlePatterns/master/retina_wood.png);
+}
+
+ul li
+{
+  list-style: none;
+  font-size: 21px;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
