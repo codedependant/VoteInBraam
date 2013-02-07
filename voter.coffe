@@ -1,8 +1,0 @@
-console.log "i run everywhere"
-
-if Meteor.isServer
-  console.log "you've been server'd"
-
-
-if Meteor.isClient
-    console.log "i run in the client"

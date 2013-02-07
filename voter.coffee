@@ -5,10 +5,10 @@ Votes = new Meteor.Collection("votes")
 
 
 if Meteor.isServer
-  console.log "in the server"
+  console?.log "in the server"
 
   Meteor.publish "all-comments", ()->
-    Comments.find({text: "dfsdfd"},{limit: 10})
+    Comments.find()
 
   Meteor.publish "all-votes", ()->
     Votes.find()
