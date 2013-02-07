@@ -28,18 +28,18 @@
 <template name="votes_template">
   <div class="span6">
     <h2>Votes</h2>
+
     {{#if user_eligble}}
     <button class="btn" data-choice="sucks">Sucks</button>
     <button class="btn" data-choice="meh">Meh</button>
     <button class="btn" data-choice="awesome">Awesome</button>
     {{/if}}
+
     <h3>Sucks: {{votes_count "sucks"}}</h3>
     <h3>Meh: {{votes_count "meh"}}</h3>
     <h3>Awesome: {{votes_count "awesome"}}</h3>
 
   </div>
-
-
 </template>
 
 
@@ -47,13 +47,14 @@
 <template name="comments_template">
   <div class="span6">
     <h2>Comment</h2>
+
     <input type="text" class="input" id="comment_text" />
     <button id="comment_submit" class="btn btn-primary">Submit</button>
+
     <ul>
       {{#each comments_list}}
       <li>{{text}}</li>
       {{/each}}
-
     </ul>
 
   </div>
