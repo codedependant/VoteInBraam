@@ -3,7 +3,6 @@ Comments = new Meteor.Collection("comments")
 Votes = new Meteor.Collection("votes")
 
 
-
 if Meteor.isServer
   console?.log "in the server"
 
@@ -33,7 +32,6 @@ if Meteor.isClient
   Meteor.subscribe("all-comments")
   Meteor.subscribe("all-votes")
 
-
   Template.votes_template.votes_count = (choice)->
     Votes.find({choice: choice}).count()
 
@@ -43,15 +41,14 @@ if Meteor.isClient
     else
       false
 
+  Template.comments_template.comments_list = ()->
+    Comments.find()
 
 
   Template.votes_template.events
     "click button" : (event)->
       choice = $(event.target).data("choice")
       Votes.insert({choice: choice})
-
-  Template.comments_template.comments_list = ()->
-    Comments.find()
 
   Template.comments_template.events
     "click #comment_submit" : (event)->
